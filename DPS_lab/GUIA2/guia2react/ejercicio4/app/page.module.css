@@ -1,0 +1,131 @@
+/* Ejercicio 4 — Tabla de Multiplicar */
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f6f9;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 2.25rem;
+  box-shadow: 0 10px 30px rgba(0, 31, 63, 0.08);
+}
+
+.main h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #003f7f;
+  text-align: left;
+  border-bottom: 3px solid #fdb913;
+  padding-bottom: 0.6rem;
+  margin: 0 0 1.5rem 0;
+  display: inline-block;
+}
+
+/* Fila de controles: Número, Límite y botón alineados */
+.controls {
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.main label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1a2332;
+  margin-bottom: 0;
+}
+
+.main input {
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  width: 80px;
+  text-align: center;
+  outline: none;
+  background: #f8fafc;
+}
+
+.main input:focus {
+  border-color: #003f7f;
+  box-shadow: 0 0 0 3px rgba(0, 63, 127, .1);
+  background: #fff;
+}
+
+.main button {
+  padding: 0.65rem 1.5rem;
+  background: #fdb913;
+  color: #001f3f;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+.main button:hover {
+  background: #c9920e;
+}
+
+.main button:active {
+  transform: scale(0.98);
+}
+
+.main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.main li {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.88rem;
+  color: #003f7f;
+  font-weight: 500;
+  text-align: center;
+}
+
+.main li:nth-child(even) {
+  background: #e6f1fb;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .main button {
+    width: 100%;
+  }
+}
