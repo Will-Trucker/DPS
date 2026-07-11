@@ -69,3 +69,34 @@
   color: #1a2332;
   font-weight: 600;
 }
+
+/* Jugador */
+.jugador {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid #f0f4f8;
+}
+
+.jugador__foto {
+  width: 85px;
+  height: 100px;
+  border-radius: 10%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #fdb913;
+}
+
+.jugador__info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #5a6a7e;
+}
+
+.jugador__info strong {
+  color: #1a2332;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
