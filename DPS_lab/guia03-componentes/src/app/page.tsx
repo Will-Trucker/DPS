@@ -1,9 +1,16 @@
 // src/app/page.tsx 
 import styles from "./page.module.css"; 
+
+// estilos del complementario 2
+import Styles from "./dashboard.module.css";
+
 import ProfileCard from "../components/ProfileCard"; 
 import ProductList from "../components/ProductList";
 import RegisterForm from "../components/RegisterForm";
-import ShoppingCart from "@/components/ShoppingCart";
+import ShoppingCart from "../components/ShoppingCart";
+// Componente del complementario 2
+import DashboardVentas from "../components/dashboardVentas";
+
 
 // Reutilizamos la interface — en un proyecto real estaría en types/index.ts 
 interface ProfileProps { 
@@ -71,12 +78,21 @@ export default function Home() {
     //   </div> 
     // </main> 
 
-     <main className={styles.main}> 
-      <div className={styles.container}> 
-        <h1 className={styles.title}>Mi Tienda Tech</h1> 
-        <p className={styles.subtitle}>Carrito de compras con composición de componentes</p> 
-        <ShoppingCart /> 
-      </div> 
-    </main> 
+    //  <main className={styles.main}> 
+    //   <div className={styles.container}> 
+    //     <h1 className={styles.title}>Mi Tienda Tech</h1> 
+    //     <p className={styles.subtitle}>Carrito de compras con composición de componentes</p> 
+    //     <ShoppingCart /> 
+    //   </div> 
+    // </main> 
+
+     <main className={Styles.main}>
+      <div className={Styles.container}>
+        <h1 className={Styles.title}>Dashboard de Estadísticas</h1>
+        <p className={Styles.subtitle}>Métricas de ventas mensuales</p>
+        
+        <DashboardVentas />
+      </div>
+    </main>
   );
 }
