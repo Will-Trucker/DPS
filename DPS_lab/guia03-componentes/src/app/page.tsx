@@ -2,6 +2,8 @@
 import styles from "./page.module.css"; 
 import ProfileCard from "../components/ProfileCard"; 
 import ProductList from "../components/ProductList";
+import RegisterForm from "../components/RegisterForm";
+import ShoppingCart from "@/components/ShoppingCart";
 
 // Reutilizamos la interface — en un proyecto real estaría en types/index.ts 
 interface ProfileProps { 
@@ -53,12 +55,28 @@ export default function Home() {
     //     </div> 
     //   </div> 
     // </main> 
-    <main className={styles.main}> 
-<div className={styles.container}> 
-<h1 className={styles.title}>Tienda Online</h1> 
-<p className={styles.subtitle}>Lista de productos con filtro por categoría</p> 
-<ProductList /> 
-</div> 
-</main>
+//     <main className={styles.main}> 
+// <div className={styles.container}> 
+// <h1 className={styles.title}>Tienda Online</h1> 
+// <p className={styles.subtitle}>Lista de productos con filtro por categoría</p> 
+// <ProductList /> 
+// </div> 
+// </main>
+
+    //   <main className={styles.main}> 
+    //   <div className={styles.container}> 
+    //     <h1 className={styles.title}>Registro de Usuario</h1> 
+    //     <p className={styles.subtitle}>Formulario con validación en tiempo real</p> 
+    //     <RegisterForm /> 
+    //   </div> 
+    // </main> 
+
+     <main className={styles.main}> 
+      <div className={styles.container}> 
+        <h1 className={styles.title}>Mi Tienda Tech</h1> 
+        <p className={styles.subtitle}>Carrito de compras con composición de componentes</p> 
+        <ShoppingCart /> 
+      </div> 
+    </main> 
   );
 }
