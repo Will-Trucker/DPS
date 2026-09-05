@@ -1,10 +1,9 @@
-import { View, Text, Button, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, Button, StyleSheet, TouchableOpacity, Image, ScrollView } from 'react-native';
 import type { DrawerScreenProps } from '@react-navigation/drawer';
-import type { RootStackParamList } from './navigation/type';
-import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
-type Props = BottomTabScreenProps<RootStackParamList, 'Home'>;
+import type { RootStackParamList } from '../navigation/types';
 
-// Definir el array de imágenes
+type Props = DrawerScreenProps<RootStackParamList, 'Home'>;
+
 const images = [
   {
     id: 1,
@@ -22,7 +21,11 @@ const images = [
 
 function HomeScreen({ navigation }: Props) {
   return (
-    <View style={styles.container}>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.contentContainer}
+      showsVerticalScrollIndicator={false}
+    >
       <View style={styles.header}>
         <Text style={styles.bannerTitle}>Bienvenido a Reciclaje Eco</Text>
         <Text style={styles.bannerText}>Ayudamos a cuidar el medio ambiente a través del reciclaje. ¡Únete a nosotros!</Text>
@@ -38,12 +41,19 @@ function HomeScreen({ navigation }: Props) {
           </TouchableOpacity>
         ))}
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, alignItems: 'center', justifyContent: 'center' },
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  contentContainer: {
+    flexGrow: 1,
+    paddingBottom: 40, // evita que la barra de tabs tape el final
+  },
   header: { padding: 20, backgroundColor: '#CEFF25' },
   bannerTitle: { fontSize: 24, fontWeight: 'bold', color: '#000000' },
   bannerText: { fontSize: 16, color: '#000000' },
