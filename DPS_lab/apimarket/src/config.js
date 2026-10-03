@@ -1,11 +1,7 @@
-// src/config.js
-import mysql from 'mysql2/promise';
 import 'dotenv/config';
 
-export const pool = mysql.createPool({
-  host: process.env.MYSQLHOST || mysql.railway.internal,
-  user: process.env.MYSQLUSER || root,
-  password: process.env.MYSQLPASSWORD || wAwuqGzDBcZVDZrtWqhBFvyyNNIuOfYu,
-  database: process.env.MYSQLDATABASE || railway,
-  port: process.env.MYSQLPORT || 3306,
-});
+export const DB_HOST = process.env.MYSQLHOST;
+export const DB_USER = process.env.MYSQLUSER;
+export const DB_PASSWORD = process.env.MYSQLPASSWORD;
+export const DB_DATABASE = process.env.MYSQLDATABASE;
+export const DB_PORT = process.env.MYSQLPORT;
